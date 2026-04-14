@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Salon | Premium Grooming Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(12px); transition: all 0.4s ease; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        #loader { transition: opacity 0.5s ease; }
+        .map-container iframe { filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-[100]">
+        <div class="w-12 h-12 border-4 border-yellow-500 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <header>
+        <nav id="navbar" class="fixed w-full top-0 z-50 glass text-white px-8 py-5 flex justify-between items-center border-b border-white/10">
+            <div class="text-2xl font-black tracking-tighter uppercase cursor-pointer">
+                Elite<span class="text-yellow-500">Salon</span>
+            </div>
+
+            <ul class="hidden md:flex gap-10 text-xs font-bold tracking-widest uppercase">
+                <li><a href="#services" class="hover:text-yellow-500 transition">Services</a></li>
+                <li><a href="#transformation" class="hover:text-yellow-500 transition">Stories</a></li>
+                <li><a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a></li>
+                <li><a href="#booking" class="hover:text-yellow-500 transition">Book</a></li>
+            </ul>
+
+            <a href="#booking" class="hidden md:flex items-center gap-2 bg-yellow-600 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-yellow-700 transition transform hover:-translate-y-1">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Reserve Now
+            </a>
+
+            <button id="menu-btn" class="md:hidden p-2 text-yellow-500"><i data-lucide="menu"></i></button>
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black flex flex-col items-center justify-center gap-8 text-2xl text-white opacity-0 pointer-events-none transition-all duration-300 scale-95">
+            <button id="close-btn" class="absolute top-6 right-8 text-yellow-500"><i data-lucide="x" class="w-10 h-10"></i></button>
+            <a href="#services" class="mobile-link hover:text-yellow-500">Services</a>
+            <a href="#transformation" class="mobile-link hover:text-yellow-500">Stories</a>
+            <a href="#pricing" class="mobile-link hover:text-yellow-500">Pricing</a>
+            <a href="#booking" class="mobile-link hover:text-yellow-500">Appointment</a>
+            <a href="https://wa.me/91XXXXXXXXXX" class="bg-yellow-600 px-8 py-3 rounded-full font-bold uppercase text-sm">WhatsApp Chat</a>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <source src="https://cdn.coverr.co/videos/coverr-barber-cutting-hair-9711/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <span class="text-yellow-500 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">Est. 2024 • Luxury Grooming</span>
+            <h1 class="text-6xl md:text-8xl text-white font-black mb-6 leading-tight">Elite Style <br><span class="italic text-yellow-500">Redefined</span></h1>
+            <p class="mb-10 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light">Experience high-end precision and ultimate relaxation.</p>
+            <div class="flex flex-col md:flex-row gap-5 justify-center">
+                <a href="#booking" class="bg-yellow-500 text-black px-12 py-4 rounded-full font-bold hover:bg-white transition duration-500">Book Appointment</a>
+                <a href="#pricing" class="border border-white/50 text-white px-12 py-4 rounded-full font-bold hover:bg-white hover:text-black transition duration-500 backdrop-blur-sm">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Our Expertise</h2>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-8 shadow-2xl"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800" class="group-hover:scale-110 transition duration-700"></div>
+                    <h3 class="text-3xl font-bold mb-3">Master Haircut</h3>
+                    <p class="text-gray-500 font-light leading-relaxed">Artistic precision meets modern style trends.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-8 shadow-2xl"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800" class="group-hover:scale-110 transition duration-700"></div>
+                    <h3 class="text-3xl font-bold mb-3">Beard Grooming</h3>
+                    <p class="text-gray-500 font-light leading-relaxed">Classic hot towel shaves for the modern gentleman.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-8 shadow-2xl"><img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800" class="group-hover:scale-110 transition duration-700"></div>
+                    <h3 class="text-3xl font-bold mb-3">Skin Therapy</h3>
+                    <p class="text-gray-500 font-light leading-relaxed">Revitalizing treatments for a fresh, healthy glow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-zinc-100 px-6">
+        <h2 class="text-center text-5xl font-black mb-16 uppercase italic">Gallery</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600" class="rounded-2xl hover:brightness-75 transition duration-500 cursor-pointer object-cover h-64 w-full shadow-lg">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=600" class="rounded-2xl hover:brightness-75 transition duration-500 cursor-pointer object-cover h-64 w-full shadow-lg">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600" class="rounded-2xl hover:brightness-75 transition duration-500 cursor-pointer object-cover h-64 w-full shadow-lg">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600" class="rounded-2xl hover:brightness-75 transition duration-500 cursor-pointer object-cover h-64 w-full shadow-lg">
+        </div>
+    </section>
+
+    <section id="booking" class="py-24 bg-zinc-950 text-white relative px-6 overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl font-black mb-6 uppercase italic">Book Your Chair</h2>
+            <p class="text-gray-400 mb-12">Skip the queue. Secure your premium grooming slot instantly.</p>
+            
+            <form class="glass-card p-8 md:p-12 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="space-y-2">
+                    <label class="text-xs uppercase font-bold tracking-widest text-yellow-500">Full Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-500 transition">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs uppercase font-bold tracking-widest text-yellow-500">Service</label>
+                    <select class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-500 transition">
+                        <option class="bg-black">Signature Haircut</option>
+                        <option class="bg-black">Beard Sculpting</option>
+                        <option class="bg-black">The Elite Ritual</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs uppercase font-bold tracking-widest text-yellow-500">Date</label>
+                    <input type="date" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-500 transition">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs uppercase font-bold tracking-widest text-yellow-500">Time</label>
+                    <input type="time" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-yellow-500 transition">
+                </div>
+                <button class="md:col-span-2 bg-yellow-500 text-black font-black uppercase py-5 rounded-xl hover:bg-white transition duration-500 mt-4 tracking-widest">Confirm Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-black text-white pt-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1">
+                <div class="text-3xl font-black uppercase mb-8 tracking-tighter">Elite<span class="text-yellow-500">Salon</span></div>
+                <p class="text-gray-400 font-light leading-relaxed mb-8">Luxury grooming is not just a service, it's an experience. Visit us to feel the difference.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-yellow-500 hover:text-black transition transform hover:-translate-y-1"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-yellow-500 hover:text-black transition transform hover:-translate-y-1"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-yellow-500 hover:text-black transition transform hover:-translate-y-1"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-8 text-yellow-500 uppercase tracking-widest">Find Us</h4>
+                <div class="map-container rounded-2xl overflow-hidden h-48 border border-white/10 shadow-2xl">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710500000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p class="text-gray-500 text-xs mt-4 italic"><i data-lucide="map-pin" class="inline w-3 h-3"></i> 123 Fashion Street, Mumbai</p>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-8 text-yellow-500 uppercase tracking-widest">Grooming Hours</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li class="flex justify-between border-b border-white/5 pb-2"><span>Monday - Friday</span><span class="text-white">10am - 9pm</span></li>
+                    <li class="flex justify-between border-b border-white/5 pb-2 font-bold text-yellow-500"><span>Sat - Sun</span><span>9am - 10pm</span></li>
+                    <li class="pt-4 flex items-center gap-2 text-xs"><i data-lucide="phone" class="w-4 h-4 text-yellow-500"></i> +91 98765 43210</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-bold mb-8 text-yellow-500 uppercase tracking-widest">Membership</h4>
+                <p class="text-gray-400 text-sm mb-6">Join our elite list for exclusive styling tips and early bookings.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 w-full focus:outline-none">
+                    <button class="bg-yellow-500 text-black px-4 rounded-r-xl font-bold hover:bg-white transition"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 pt-10 border-t border-white/10 text-center text-gray-500 text-[10px] tracking-[0.3em] uppercase pb-10">
+            &copy; 2026 Elite Salon • Curated Grooming Excellence
+        </div>
+    </footer>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50 animate-bounce">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <script>
+        // Preloader
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            loader.style.opacity = "0";
+            setTimeout(() => { loader.style.display = "none"; }, 500);
+        });
+
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Logic
+        window.addEventListener("scroll", () => {
+            const nav = document.getElementById("navbar");
+            if (window.scrollY > 80) {
+                nav.classList.add("py-3", "bg-black/95", "shadow-2xl");
+                nav.classList.remove("py-5");
+            } else {
+                nav.classList.add("py-5");
+                nav.classList.remove("py-3", "bg-black/95", "shadow-2xl");
+            }
+        });
+
+        // Fixed Mobile Menu Logic
+        const btn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const menu = document.getElementById("mobile-menu");
+        const links = document.querySelectorAll(".mobile-link");
+
+        const openMenu = () => {
+            menu.classList.remove("opacity-0", "pointer-events-none", "scale-95");
+        };
+        const closeMenu = () => {
+            menu.classList.add("opacity-0", "pointer-events-none", "scale-95");
+        };
+
+        btn.onclick = openMenu;
+        closeBtn.onclick = closeMenu;
+        links.forEach(link => link.onclick = closeMenu);
+    </script>
+</body>
+</html>
